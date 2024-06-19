@@ -1,13 +1,27 @@
-# Builder for epsonscan2
-
-This allows building the epsonscan2 software https://support.epson.net/linux/en/epsonscan2.php as a Debian package.
+# About
+This Repository allows to download or build building the epsonscan2 software https://support.epson.net/linux/en/epsonscan2.php as a Debian package.
 
 ## Why
 I wanted to run an EPSON DS-310 on my headless Raspberry PI (a scanserver for paperless-ngx).
 
 There are no official arm64 images and the deb files require an X server installation which I really like to avoid.
 
-### Other sane backends
+# Usage
+1. Download the latest deb paclage from: https://github.com/janrueth/epsonscan2/releases/
+From Ubuntu Server 24 ARM
+
+#Add debian package repository so that necessary dependencies can be installed
+3. sudo echo "deb [trusted=yes plattform=arm64] http://ftp.de.debian.org/debian/ bullseye main" /etc/apt/sources.list.d/archive_uri-https_packages_debian_org_-noble.list
+
+#Install downloaded epsonscan2 package
+4. sudo apt install ./epsonscan2-headless_0.1.0-6.7.43.0-1_arm64.deb
+
+# Build epsonscan2-headless
+<<<<------Please fill instructions-------->>
+<<<<------Please fill instructions-------->>
+<<<<------Please fill instructions-------->>
+
+### Other sane backends in consideration
 There are other backends that "support" this printer.
 
 * epson
@@ -17,7 +31,8 @@ There are other backends that "support" this printer.
 
 I'm really not sure which one to actually use, I had success with utsushi but all in all it feels that the backends (apart from utsushi) are all pretty dated.
 
-I finally decided to go with epsonscan2 over utsushi as the build does not consume so much memory.
+**I finally decided to go with epsonscan2 over utsushi as the build does not consume so much memory.
+**
 
 ## How
 I found that the epsonscan2 code already contain a define to exclude the UI component and just build the command line tooling.
