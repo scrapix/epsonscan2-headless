@@ -17,6 +17,8 @@ wget https://github.com/janrueth/epsonscan2/releases/download/v0.1.0/epsonscan2-
 3. 
 ```
 sudo echo "deb [trusted=yes plattform=arm64] >> http://ftp.de.debian.org/debian/ bullseye main" /etc/apt/sources.list.d/archive_uri-https_packages_debian_org_-noble.list
+sudo apt update
+sudo apt upgrade
 ```
 
 #Install downloaded epsonscan2 package
