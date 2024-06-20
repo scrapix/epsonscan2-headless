@@ -9,6 +9,9 @@ There are no official arm64 images and the deb files require an X server install
 # Usage
 1. Download the latest deb paclage from: https://github.com/janrueth/epsonscan2/releases/
 From Ubuntu Server 24 ARM
+```
+wget https://github.com/janrueth/epsonscan2/releases/download/v0.1.0/epsonscan2-headless_0.1.0-6.7.43.0-1_arm64.deb
+```
 
 #Add debian package repository so that necessary dependencies can be installed
 3. 
@@ -17,7 +20,10 @@ sudo echo "deb [trusted=yes plattform=arm64] >> http://ftp.de.debian.org/debian/
 ```
 
 #Install downloaded epsonscan2 package
-4. `sudo apt install ./epsonscan2-headless_0.1.0-6.7.43.0-1_arm64.deb`
+4. 
+```
+sudo apt install ./epsonscan2-headless_0.1.0-6.7.43.0-1_arm64.deb
+```
 
 # Build epsonscan2-headless
 <<<<------Please fill instructions-------->>
